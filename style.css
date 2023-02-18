@@ -33,6 +33,7 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
   height: 100vh;
+  max-height: 1000px ;
   width: 100%;
 }
 
@@ -69,7 +70,6 @@ ul {
 }
 
 #link-nav ul li a {
-  font-family: "Nunito Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 1.5rem;
@@ -80,7 +80,7 @@ ul {
 }
 
 #link-nav ul li:hover a {
-text-decoration: underline;
+  text-decoration: underline;
 }
 
 #link-nav ul li a::after {
@@ -172,6 +172,10 @@ text-decoration: underline;
   content: "🖥️";
 }
 
+#sub-menu a:hover {
+  text-decoration: underline;
+}
+
 /* #link-nav ul li a:hover #sub-menu {
     display: none;
 } */
@@ -216,6 +220,19 @@ h1 {
   letter-spacing: 0.02em;
   color: #ffffff;
   margin-top: 30px;
+  position: relative;
+}
+
+h1::after {
+content: url(./IMG/Decore-outivy.png);
+width: 20%;
+height: 100%;
+background-size: cover;
+background-position: center;
+position: absolute;
+top: 20px;
+left: 0;
+
 }
 
 #hero-description p {
@@ -248,3 +265,38 @@ h1 {
   border: 2px solid #fff;
   border-radius: 5px;
 }
+
+#arrow-animation {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transform-origin:center;
+    animation: fleche 0.8s infinite ;
+}
+
+#btn-reservation:hover #arrow-animation {
+    display: block;
+    width: 0;
+    height: 0;
+    top: -15px;
+    left: 300px;
+}
+
+@keyframes fleche {
+    from {
+      transform: rotate(0);
+    }
+  
+    25% {
+        transform: rotate(-90deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    75% {
+        transform: rotate(-270deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+  }
