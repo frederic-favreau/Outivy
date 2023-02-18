@@ -1,11 +1,159 @@
 *,
 ::after,
 ::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  background-color: #FAFAFB;
 }
+
+.row-limit-size {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* ---------- HEADER - NAV BAR---------- */
+
+#header {
+    background-image: url(./IMG/hero-left.png);
+    background-position:left;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+#nav-top {
+    height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+#container-logo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#logo {
+  height: 40px;
+}
+
+/* #container-logo span {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2.2rem;
+  line-height: 45px;
+  color: #ffffff;
+} */
+
+#link-nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#link-nav ul li a {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 126.9%;
+  letter-spacing: 0.02em;
+  color: #eeeeee;
+  position: relative;
+}
+
+#link-nav ul li a::after {
+    content: "🡖";
+    color: #eeeeee;
+    position: absolute;
+    top: 0px;
+    right: -19px;
+}
+
+#link-nav ul {
+  display: flex;
+}
+
+#link-nav > ul a {
+  margin: 0 25px 25px;
+}
+
+#container-connexion {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#container-connexion ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+
+#login {
+  margin: 0 15px 15px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 126.9%;
+  color: #757575;
+}
+
+.btn-connexion {
+  width: 171px;
+  height: 60px;
+  padding: 10px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 126.9%;
+  color: #fff;
+  background: #f72585
+
+  ;
+border-radius: 10px;
+/* text-decoration: underline; */
+}
+
+/* ---------- HEADER - HERO---------- */
+
+#container-hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#hero-description {
+    width: 50%;
+    height: 100%;
+}
+
+#hero-picture {
+    width: 50%;
+    height: 100%;
+}
+
+
+
+
+
+

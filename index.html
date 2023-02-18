@@ -11,12 +11,36 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav id="nav-top">
+    <header id="header">
+        <nav id="nav-top" class="row-limit-size">
             <div id="container-logo">
-                <img src="./IMG/Outivy_Logo_Symbol_-_Main.svg" alt="Outivy">
+                <img src="./IMG/Outivy Logo - White.png" id="logo" alt="Outivy">
+            </div>
+            <div id="link-nav">
+                <ul>
+                    <li><a href="#">Solitions</a></li>
+                    <li><a href="#">Ressources</a></li>
+                    <li><a href="#">A propos</a></li>
+                </ul>
+            </div>
+            <div id="container-connexion">
+                <ul>
+                    <li><a href="#" id="login">Login</a></li>
+                    <li><a href="#" class="btn-connexion">Reserver une demo</a></li>
+                </ul>
             </div>
         </nav>
+        <div id="container-hero">
+            <div id="hero-description">
+                <p id="hello">👋 Bienvenue chez Outivy</p>
+                <h1>Outivy, créateur de productivité</h1>
+                <p>Vous créez, nous automatisons</p>
+                <a href="#">Demander une demo</a>
+            </div>
+            <div id="hero-picture">
+                <img src="./IMG/Digital_presentation-rafiki.svg" alt="">
+            </div>
+        </div>
     </header>
     
 </body>
