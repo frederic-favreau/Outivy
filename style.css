@@ -3,7 +3,7 @@
 ::before {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -28,26 +28,31 @@ ul {
 /* ---------- HEADER - NAV BAR---------- */
 
 #header {
-  background-image: url(./IMG/hero-left.png);
+  /* background-image: url(./IMG/hero-left.png);
   background-position: left;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: 70vw;
+  background-repeat: no-repeat; */
+  background-color: #7421fc;
   height: 100vh;
-  max-height: 1000px ;
-  width: 100%;
+  min-height: 60px;
+  padding: 0 5%;
+  margin: 0 auto;
+  overflow: auto;
+  position: relative;
 }
 
 #nav-top {
-  height: 80px;
+  height: 90px;
   display: flex;
   align-items: center;
 }
 
 #container-logo {
-  width: 100%;
+  width: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-right: auto;
 }
 
 #logo {
@@ -64,7 +69,7 @@ ul {
 } */
 
 #link-nav {
-  width: 100%;
+  width: fit-content;
   display: flex;
   justify-content: center;
 }
@@ -94,7 +99,6 @@ ul {
 
 #link-nav a:hover::before {
   transform: scaleX(1);
-  
 }
 
 #link-nav a:hover::after {
@@ -113,7 +117,7 @@ ul {
   height: 15px;
   width: 15px;
   transform: rotate(-90deg);
-} 
+}
 
 #link-nav ul {
   display: flex;
@@ -121,13 +125,13 @@ ul {
 
 #link-nav > ul a {
   margin: 0 25px 25px;
-
 }
 
 #container-connexion {
-  width: 100%;
+  width: fit-content;
   display: flex;
   justify-content: flex-end;
+  margin-left: auto;
 }
 
 #container-connexion ul {
@@ -143,7 +147,11 @@ ul {
   font-weight: 600;
   font-size: 1.3rem;
   line-height: 126.9%;
-  color: #757575;
+  color: #fff;
+}
+
+#btn-burger {
+  display: none;
 }
 
 #btn-connexion {
@@ -157,28 +165,34 @@ ul {
   color: #fff;
   background: #f72585;
   border-radius: 10px;
-  /* text-decoration: underline; */
 }
 
 #btn-connexion:hover {
   opacity: 90%;
   color: #f72585;
-  background: #fafafb;
+  background: rgb(255, 255, 255);
   border: 2px solid #f72585;
   margin-left: -4px;
+}
+
+@media screen and (max-width: 1150px) {
+  #link-nav {
+    display: none;
+  }
 }
 
 /* ---------- SUB-MENU---------- */
 
 #sub-menu {
-  width: 100vw;
+  width: 100%;
   height: 40%;
   position: absolute;
   z-index: 99;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  display: none;
-  animation: 1s ease-in-out ;
+  display: none; 
+  animation: 1s ease-in-out;
+  left: 0;
 }
 
 #container-sub-menu {
@@ -211,18 +225,158 @@ ul {
 #container-hero {
   display: flex;
   justify-content: center;
-  width: 100%;
+  min-height: 60px;
+  padding-top: 60px;
 }
 
 #hero-description {
   width: 50%;
   height: 100%;
-  margin-top: 80px;
 }
 
 #hero-picture {
   width: 50%;
-  height: 100%;
+  height: fit-content;
+  margin-bottom: -200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  background-color: #fff;
+  border-radius: 3000px 380px 200px 110px;
+}
+
+#hero-picture img{
+  margin-top: 10%;
+  height: 500px;
+}
+
+@media screen and (max-width: 1500px) {
+  #hero-picture {
+    width: 40%;
+  }
+
+  #hero-description {
+    width: 60%;
+  }
+  #hero-picture img {
+    margin-top: 20%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  #hero-picture {
+    width: 30%;
+  }
+
+  #hero-description {
+    width: 70%;
+  }
+  #hero-picture img {
+    margin-top: 20%;
+    height: 50%;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  #hero-picture {
+    display: none;
+  }
+  #container-hero #hero-description {
+    width: 90%;
+    margin: 70px auto;
+  }
+
+  #login {
+    display: none;
+  }
+
+  #btn-burger {
+    display: block;
+  }
+
+  #btn-connexion {
+    display: none;
+  }
+
+  #container-pipe {
+    background: #f72585;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 5px 0;
+  }
+
+  .pipe-burger {
+    height: 3px;
+    width: 70%;
+    background-color: #fff;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #header #container-hero {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  #container-hero #hero-description {
+    width: 100%;
+  }
+
+  #hero-description h1 {
+    font-size: 54px;
+  }
+
+  #container-hero #hero-description p {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  #hero-description h1 {
+    font-size: 44px;
+  }
+
+  #hero-description h1::after {
+    display: none;
+  }
+
+  #container-hero #hero-description p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #hero-description h1 {
+    font-size: 40px;
+  }
+
+  #container-hero #hero-description p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  #hero-description h1 {
+    font-size: 28px;
+  }
+
+  #container-hero #hero-description p {
+    font-size: 12px;
+  }
+
+  #hero-description #hello {
+    font-size: 14px;
+  }
+
+  #container-hero #hero-description a {
+    font-size: 16px;
+  }
 }
 
 #hello {
@@ -247,18 +401,19 @@ h1 {
   color: #ffffff;
   margin-top: 30px;
   position: relative;
+  white-space: nowrap;
+  width: 100%;
 }
 
 h1::after {
-content: url(./IMG/Decore-outivy.png);
-width: 20%;
-height: 100%;
-background-size: cover;
-background-position: center;
-position: absolute;
-top: 20px;
-left: 0;
-
+  content: url(./IMG/Decore-outivy.png);
+  width: 20%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 20px;
+  left: 0;
 }
 
 #hero-description p {
@@ -270,6 +425,7 @@ left: 0;
   color: #ffffff;
   margin-top: 60px;
   position: relative;
+  white-space: nowrap;
 }
 
 #hero-description p::after {
@@ -293,36 +449,36 @@ left: 0;
 }
 
 #arrow-animation {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    transform-origin:center;
-    animation: fleche 0.8s infinite ;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  transform-origin: center;
+  animation: fleche 0.8s infinite;
 }
 
 #btn-reservation:hover #arrow-animation {
-    display: block;
-    width: 0;
-    height: 0;
-    top: -15px;
-    left: 300px;
+  display: block;
+  width: 0;
+  height: 0;
+  top: -15px;
+  left: 300px;
 }
 
 @keyframes fleche {
-    from {
-      transform: rotate(0);
-    }
-  
-    25% {
-        transform: rotate(-90deg);
-    }
-    50% {
-        transform: rotate(-180deg);
-    }
-    75% {
-        transform: rotate(-270deg);
-    }
-    100% {
-        transform: rotate(-360deg);
-    }
+  from {
+    transform: rotate(0);
   }
+
+  25% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  75% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
