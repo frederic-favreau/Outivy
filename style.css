@@ -194,7 +194,7 @@ ul {
 
 #sub-menu {
   width: 100%;
-  height: 40%;
+  height: 50%;
   position: absolute;
   z-index: 99;
   background: #fff;
@@ -566,7 +566,7 @@ h1::after {
   font-size: 40px;
   line-height: 147.4%;
   letter-spacing: 0.02em;
-  color: #FFCA1D;
+  color: #ffca1d;
   text-align: center;
 }
 
@@ -584,7 +584,7 @@ h1::after {
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
 
 .item-service h5 {
@@ -612,8 +612,111 @@ h1::after {
   .item-service {
     width: 45%;
   }
+}
 
 @media screen and (min-width: 1250px) {
   .item-service {
     width: 33%;
   }
+}
+
+/* ---------- MAIN - FEATURES ---------- */
+#features {
+  padding-top: 80px;
+}
+
+#features h4 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 147.4%;
+  letter-spacing: 0.02em;
+  color: #565656;
+  text-align: center;
+  margin-bottom: 60px;
+}
+#features h4 span {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 147.4%;
+  letter-spacing: 0.02em;
+  color: #ffca1d;
+}
+
+#container-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#item-features-left {
+  width: fit-content;
+  margin-bottom: 30px;
+}
+
+#item-features-left img {
+  width: 300px;
+}
+
+#item-features-right {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+#item-features-right h5 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 147.4%;
+  letter-spacing: 0.02em;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+#item-features-right p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 38px;
+  letter-spacing: 0.005em;
+  color: #575757;
+}
+
+@media screen and (min-width: 950px) {
+  #container-features {
+    width: 90%;
+  }
+
+  #item-features-left {
+    width: 40%;
+  }
+  #item-features-left img {
+    width: 100%;
+  }
+  
+  #item-features-right {
+    width: 50%;
+    padding-left: 20px;
+    height: 50%;
+    margin-top: 10%;
+  }
+
+  @media screen and (min-width: 1250px) {
+    #item-features-right {
+      padding-left: 100px;
+    }
+
+    #item-features-right h5 {
+      font-size: 40px;
+    }
+  
+    #item-features-right p {
+      font-size: 24px;
+    } 
+  }
+
+  
+}
