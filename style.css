@@ -278,7 +278,8 @@ ul {
 .ellipse-commun {
   position: absolute;
   border-radius: 50%;
-  display: block;
+  display: flex;
+  justify-content: space-between;
 }
 
 /* #container-ellipse:hover #ellipse-middle {
