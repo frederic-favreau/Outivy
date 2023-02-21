@@ -33,17 +33,19 @@ ul {
   background-size: 70vw;
   background-repeat: no-repeat; */
   background-color: #7421fc;
-  /* height: 80vh; */
+  height: 100vh;
   min-height: 60px;
+  max-height: 950px;
   padding: 0 5%;
   margin: 0 auto;
   overflow: auto;
   position: relative;
   padding-bottom: 60px;
+  overflow: hidden;
 }
 
 #nav-top {
-  height: 90px;
+  height: 140px;
   display: flex;
   align-items: center;
 }
@@ -196,7 +198,7 @@ ul {
   width: 100%;
   height: 50%;
   position: absolute;
-  z-index: 99;
+  z-index: 999;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: none;
@@ -237,22 +239,152 @@ ul {
 #hero-description {
   width: 50%;
   height: 100%;
+  padding-bottom: 100px;
 }
 
 #hero-picture {
   width: 50%;
-  height: fit-content;
-  margin-bottom: -200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 3000px 380px 200px 110px;
+  height: 100%;
+  position: relative;
 }
 
-#hero-picture img {
-  margin-top: 10%;
-  height: 25%;
+/* #hero-picture:hover #ellipse-small {
+  transform: rotate(90deg);
+  transform-origin: center;
+} */
+
+#container-ellipse {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 300px;
+}
+
+.round {
+  height: 80px;
+  width: 80px;
+  background-color: #F72585;
+  border-radius: 40px;
+  border: 1px solid #fff;
+}
+
+/* #hero-picture img {
+  position: absolute;
+  border-radius: 50%;
+  border: 10px dashed black; 
+  display: block;
+} */
+
+.ellipse-commun {
+  position: absolute;
+  border-radius: 50%;
+  display: block;
+}
+
+/* #container-ellipse:hover #ellipse-middle {
+  transform: rotate(790deg);
+  transform-origin: center;
+} */
+
+#ellipse-small {
+  /* bottom: -150px;
+  left: 250px; */
+  bottom: -100px;
+  left: 255px;
+  z-index: 99;
+  animation: ellipseAnim-small 10.0s infinite;
+  background-image: url(./IMG/Ellipse-petite-hero.png);
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+  height: 250px;
+
+}
+
+#ellipse-middle {
+  /* bottom: -250px;
+  left: 150px; */
+  bottom: -170px;
+  left: 180px;
+  z-index: 50;
+  transform-origin: center;
+  animation: ellipseAnim-middle 10.0s infinite;
+  background-image: url(./IMG/Ellipse-moyenne-hero.png);
+  background-position: center;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+}
+
+#ellipse-tall {
+  /* bottom: -340px;
+  left: 60px; */
+  bottom: -240px;
+  left: 105px;
+  z-index: 1;
+  animation: ellipseAnim-tall 10.0s infinite;
+  background-image: url(./IMG/Ellipse-grande-hero.png);
+  background-position: center;
+  background-size: cover;
+  width: 550px;
+  height: 550px;
+}
+
+@keyframes ellipseAnim-small {
+  from {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  75% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes ellipseAnim-middle {
+  from {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ellipseAnim-tall {
+  from {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  75% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -457,7 +589,7 @@ h1::after {
 }
 
 #arrow-animation {
-  position: relative;
+  position: r@]elative;
   top: 0px;
   left: 0px;
   transform-origin: center;
