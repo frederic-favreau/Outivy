@@ -32,7 +32,7 @@ ul {
   background-position: left;
   background-size: 70vw;
   background-repeat: no-repeat; */
-  background-color: #7421fc;
+  background-color: #3c2463;
   height: 100vh;
   min-height: 60px;
   max-height: 950px;
@@ -42,6 +42,41 @@ ul {
   position: relative;
   padding-bottom: 60px;
   overflow: hidden;
+}
+
+#header::before, 
+#header::after {
+  content: "";
+  width: 50vmax;
+  height: 50vmax;
+  position: absolute;
+  background: #6229bd;
+  opacity: 0.1;
+  left: -20vmin;
+  top: -20vmin;
+  animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+  z-index: 0;
+  will-change: border-radius, transform;
+  transform-origin: 55% 55%;
+  pointer-events: none; 
+}
+
+#header::after {
+  width: 50vmin;
+  height: 50vmin;
+  left: auto;
+  right: -10vmin;
+  top: auto;
+  bottom: 0;
+  animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+  transform-origin: 20% 20%; 
+}
+
+@keyframes morph {
+0% {
+  border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+100% {
+  border-radius: 40% 60%; } 
 }
 
 #nav-top {
@@ -263,9 +298,12 @@ ul {
 .round {
   height: 80px;
   width: 80px;
-  background-color: #F72585;
+  /* background-color: #F72585; */
   border-radius: 40px;
   border: 1px solid #fff;
+  background-image: url(./IMG/make-app-icon-circle.png);
+  background-size: cover;
+  background-position: center;
 }
 
 /* #hero-picture img {
@@ -288,12 +326,10 @@ ul {
 } */
 
 #ellipse-small {
-  /* bottom: -150px;
-  left: 250px; */
   bottom: -100px;
   left: 255px;
   z-index: 99;
-  animation: ellipseAnim-small 10.0s infinite;
+  animation: ellipseAnim-small 30.0s infinite;
   background-image: url(./IMG/Ellipse-petite-hero.png);
   background-position: center;
   background-size: cover;
@@ -303,13 +339,11 @@ ul {
 }
 
 #ellipse-middle {
-  /* bottom: -250px;
-  left: 150px; */
   bottom: -170px;
   left: 180px;
   z-index: 50;
   transform-origin: center;
-  animation: ellipseAnim-middle 10.0s infinite;
+  animation: ellipseAnim-middle 30.0s infinite;
   background-image: url(./IMG/Ellipse-moyenne-hero.png);
   background-position: center;
   background-size: cover;
@@ -318,12 +352,10 @@ ul {
 }
 
 #ellipse-tall {
-  /* bottom: -340px;
-  left: 60px; */
   bottom: -240px;
   left: 105px;
   z-index: 1;
-  animation: ellipseAnim-tall 10.0s infinite;
+  animation: ellipseAnim-tall 30.0s infinite;
   background-image: url(./IMG/Ellipse-grande-hero.png);
   background-position: center;
   background-size: cover;
@@ -1253,6 +1285,7 @@ h1::after {
 
 #client {
   padding-top: 120px;
+  height: 800px;
 }
 
 #client h4 {
@@ -1275,14 +1308,18 @@ h1::after {
   color: #ffca1d;
 }
 
-#container-client {
+#import-clients {
+  margin: 80px 120px auto;
+}
+
+/* #container-client {
   background-image: url(./IMG/bg-client.png);
   width: 90%;
   height: 200px;
   background-position: center;
   background-size: cover;
   margin: 50px auto;
-}
+} */
 
 @media screen and (min-width: 950px) {
   #container-client {
@@ -1295,7 +1332,7 @@ h1::after {
 
 #footer {
   padding-top: 80px;
-  background-color: #f6f4ff;
+  background-color: #3c2463;
 }
 
 #container-footer {
@@ -1327,7 +1364,7 @@ h1::after {
   font-weight: 500;
   font-size: 22px;
   line-height: 33px;
-  color: #2b3377;
+  color: #fff;
 }
 
 #item-footer-left p {
@@ -1336,5 +1373,5 @@ h1::after {
   font-weight: 400;
   font-size: 20px;
   line-height: 30px;
-  color: #5c5e87;
+  color: #fff;
 }
