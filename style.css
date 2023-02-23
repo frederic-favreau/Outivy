@@ -28,14 +28,10 @@ ul {
 /* ---------- HEADER - NAV BAR---------- */
 
 #header {
-  /* background-image: url(./IMG/hero-left.png);
-  background-position: left;
-  background-size: 70vw;
-  background-repeat: no-repeat; */
   background-color: #3c2463;
   height: 100vh;
   min-height: 60px;
-  max-height: 950px;
+  max-height: 1100px;
   padding: 0 5%;
   margin: 0 auto;
   overflow: auto;
@@ -96,15 +92,6 @@ ul {
 .logo {
   height: 40px;
 }
-
-/* #container-logo span {
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 2.2rem;
-  line-height: 45px;
-  color: #ffffff;
-} */
 
 #link-nav {
   width: fit-content;
@@ -283,47 +270,59 @@ ul {
   position: relative;
 }
 
-/* #hero-picture:hover #ellipse-small {
-  transform: rotate(90deg);
-  transform-origin: center;
-} */
-
 #container-ellipse {
   height: 100%;
   width: 100%;
   position: relative;
-  top: 300px;
+  top: 400px;
 }
 
 .round {
   height: 80px;
   width: 80px;
-  /* background-color: #F72585; */
   border-radius: 40px;
   border: 1px solid #fff;
-  background-image: url(./IMG/make-app-icon-circle.png);
   background-size: cover;
   background-position: center;
 }
 
-/* #hero-picture img {
-  position: absolute;
-  border-radius: 50%;
-  border: 10px dashed black; 
-  display: block;
-} */
+#round-1 {
+  background-image: url(./IMG/bubble-logo-1.png);
+  animation: rondGauche 30.0s infinite;
+}
+
+#round-2 {
+  background-image: url(./IMG/FS-AFFI4-074-Glide-Apps.png);
+  animation: rondGauche 30.0s infinite;
+}
+
+#round-3 {
+  background-image: url(./IMG/softr.png);
+  animation: rondDroite 30.0s infinite;
+}
+
+#round-4 {
+  background-image: url(./IMG/formation-flutter.png);
+  animation: rondDroite 30.0s infinite;
+}
+
+#round-5 {
+  background-image: url(./IMG/airtable.png);
+  animation: rondGauche 30.0s infinite;
+}
+
+#round-6 {
+  background-image: url(./IMG/make-app-icon-circle.png);
+  animation: rondGauche 30.0s infinite;
+}
 
 .ellipse-commun {
   position: absolute;
   border-radius: 50%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
-/* #container-ellipse:hover #ellipse-middle {
-  transform: rotate(790deg);
-  transform-origin: center;
-} */
 
 #ellipse-small {
   bottom: -100px;
@@ -335,7 +334,6 @@ ul {
   background-size: cover;
   width: 250px;
   height: 250px;
-
 }
 
 #ellipse-middle {
@@ -367,7 +365,6 @@ ul {
   from {
     transform: rotate(0);
   }
-
   25% {
     transform: rotate(-90deg);
   }
@@ -386,7 +383,6 @@ ul {
   from {
     transform: rotate(0);
   }
-
   25% {
     transform: rotate(90deg);
   }
@@ -405,7 +401,41 @@ ul {
   from {
     transform: rotate(0);
   }
+  25% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(-180deg);
+  }
+  75% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rondGauche {
+  from {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
+@keyframes rondDroite {
+  from {
+    transform: rotate(0);
+  }
   25% {
     transform: rotate(-90deg);
   }
@@ -629,32 +659,10 @@ h1::after {
   animation: fleche 0.8s infinite;
 }
 
-#btn-reservation:hover #arrow-animation {
-  display: block;
-  width: 0;
-  height: 0;
-  top: -15px;
-  left: 300px;
+#btn-reservation:hover  {
+  transform: scale(1.2);
 }
 
-@keyframes fleche {
-  from {
-    transform: rotate(0);
-  }
-
-  25% {
-    transform: rotate(-90deg);
-  }
-  50% {
-    transform: rotate(-180deg);
-  }
-  75% {
-    transform: rotate(-270deg);
-  }
-  100% {
-    transform: rotate(-360deg);
-  }
-}
 
 /* ---------- MAIN - CHOOSE - SOCIETY ---------- */
 
@@ -664,7 +672,7 @@ h1::after {
   justify-content: center;
   align-items: center;
   width: 90%;
-  padding-top: 60px;
+  padding-top: 120px;
 }
 
 #choose-society h4 {
@@ -712,7 +720,7 @@ h1::after {
 /* ---------- MAIN - SERVICE ---------- */
 
 #service {
-  padding-top: 80px;
+  padding-top: 120px;
 }
 #service h4 {
   font-style: normal;
@@ -796,7 +804,7 @@ h1::after {
 /* ---------- MAIN - FEATURES ---------- */
 
 #features {
-  padding-top: 80px;
+  padding-top: 120px;
   padding-bottom: 80px;
 }
 
@@ -894,7 +902,7 @@ h1::after {
 /* ---------- MAIN - READY ---------- */
 
 #ready {
-  padding-top: 80px;
+  padding-top: 120px;
   background-color: #f6f4ff;
 }
 
@@ -974,7 +982,7 @@ h1::after {
 /* ---------- MAIN - TOOLS ---------- */
 
 #tools {
-  padding-top: 80px;
+  padding-top: 120px;
   padding-bottom: 80px;
   width: 90%;
 }
@@ -1047,7 +1055,7 @@ h1::after {
 /* ---------- MAIN - AUTOMATION---------- */
 
 #automation {
-  padding-top: 60px;
+  padding-top: 120px;
 }
 
 #container-automation {
@@ -1117,7 +1125,7 @@ h1::after {
 /* ---------- MAIN - VISUAL ---------- */
 
 #visual {
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 #container-visual {
@@ -1191,7 +1199,7 @@ h1::after {
 /* ---------- MAIN - SUPPORT ---------- */
 
 #support {
-  padding-top: 80px;
+  padding-top: 120px;
 }
 
 #container-support {
