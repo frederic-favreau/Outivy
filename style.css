@@ -50,11 +50,11 @@ ul {
   width: 50vmax;
   height: 50vmax;
   position: absolute;
-  background: #6229bd;
+  background: #d9d2e4;
   opacity: 0.1;
   left: -20vmin;
   top: -20vmin;
-  animation: morph 15s linear infinite alternate, spin 20s linear infinite;
+  animation: morph 10s linear infinite alternate, spin 2s linear infinite;
   z-index: 0;
   will-change: border-radius, transform;
   transform-origin: 55% 55%;
@@ -62,13 +62,13 @@ ul {
 }
 
 #header::after {
-  width: 50vmin;
-  height: 50vmin;
+  width: 30vmin;
+  height: 30vmin;
   left: auto;
   right: -10vmin;
   top: auto;
   bottom: 0;
-  animation: morph 10s linear infinite alternate, spin 26s linear infinite reverse;
+  animation: morph 7s linear infinite alternate, spin 26s linear infinite reverse;
   transform-origin: 20% 20%; 
 }
 
