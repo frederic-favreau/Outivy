@@ -40,7 +40,7 @@ ul {
   overflow: hidden;
 }
 
-#header::before, 
+#header::before,
 #header::after {
   content: "";
   width: 50vmax;
@@ -54,7 +54,7 @@ ul {
   z-index: 0;
   will-change: border-radius, transform;
   transform-origin: 55% 55%;
-  pointer-events: none; 
+  pointer-events: none;
 }
 
 #header::after {
@@ -64,15 +64,18 @@ ul {
   right: -10vmin;
   top: auto;
   bottom: 0;
-  animation: morph 7s linear infinite alternate, spin 26s linear infinite reverse;
-  transform-origin: 20% 20%; 
+  animation: morph 7s linear infinite alternate,
+    spin 26s linear infinite reverse;
+  transform-origin: 20% 20%;
 }
 
 @keyframes morph {
-0% {
-  border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
-100% {
-  border-radius: 40% 60%; } 
+  0% {
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  }
 }
 
 #nav-top {
@@ -204,8 +207,6 @@ ul {
   opacity: 90%;
   color: #f72585;
   background: rgb(255, 255, 255);
-  border: 2px solid #f72585;
-  margin-left: -4px;
 }
 
 @media screen and (max-width: 1150px) {
@@ -218,7 +219,7 @@ ul {
 
 #sub-menu {
   width: 100%;
-  height: 50%;
+  height: 40%;
   position: absolute;
   z-index: 999;
   background: #fff;
@@ -262,6 +263,7 @@ ul {
   width: 50%;
   height: 100%;
   padding-bottom: 100px;
+  position: relative;
 }
 
 #hero-picture {
@@ -288,32 +290,32 @@ ul {
 
 #round-1 {
   background-image: url(./IMG/bubble-logo-1.png);
-  animation: rondGauche 30.0s infinite;
+  animation: rondGauche 30s infinite;
 }
 
 #round-2 {
   background-image: url(./IMG/FS-AFFI4-074-Glide-Apps.png);
-  animation: rondGauche 30.0s infinite;
+  animation: rondGauche 30s infinite;
 }
 
 #round-3 {
   background-image: url(./IMG/softr.png);
-  animation: rondDroite 30.0s infinite;
+  animation: rondDroite 30s infinite;
 }
 
 #round-4 {
   background-image: url(./IMG/formation-flutter.png);
-  animation: rondDroite 30.0s infinite;
+  animation: rondDroite 30s infinite;
 }
 
 #round-5 {
   background-image: url(./IMG/airtable.png);
-  animation: rondGauche 30.0s infinite;
+  animation: rondGauche 30s infinite;
 }
 
 #round-6 {
   background-image: url(./IMG/make-app-icon-circle.png);
-  animation: rondGauche 30.0s infinite;
+  animation: rondGauche 30s infinite;
 }
 
 .ellipse-commun {
@@ -328,7 +330,7 @@ ul {
   bottom: -100px;
   left: 255px;
   z-index: 99;
-  animation: ellipseAnim-small 30.0s infinite;
+  animation: ellipseAnim-small 30s infinite;
   background-image: url(./IMG/Ellipse-petite-hero.png);
   background-position: center;
   background-size: cover;
@@ -341,7 +343,7 @@ ul {
   left: 180px;
   z-index: 50;
   transform-origin: center;
-  animation: ellipseAnim-middle 30.0s infinite;
+  animation: ellipseAnim-middle 30s infinite;
   background-image: url(./IMG/Ellipse-moyenne-hero.png);
   background-position: center;
   background-size: cover;
@@ -353,7 +355,7 @@ ul {
   bottom: -240px;
   left: 105px;
   z-index: 1;
-  animation: ellipseAnim-tall 30.0s infinite;
+  animation: ellipseAnim-tall 30s infinite;
   background-image: url(./IMG/Ellipse-grande-hero.png);
   background-position: center;
   background-size: cover;
@@ -448,6 +450,52 @@ ul {
   100% {
     transform: rotate(-360deg);
   }
+}
+
+.picto-hero {
+  position: absolute;
+  background-size: cover;
+  z-index: 99;
+}
+
+#picto-hero {
+  background-image: url(./IMG/pic-hero.png);
+}
+
+#picto-hero1 {
+  background-image: url(./IMG/pic-hero1.png);
+  top: 40px;
+  left: 250px;
+  height: 50px;
+  width: 50px;
+}
+
+#picto-hero2 {
+  background-image: url(./IMG/pic-hero2.png);
+  top: 280px;
+  left: 340px;
+  height: 40px;
+  width: 40px;
+}
+
+#picto-hero3 {
+  background-image: url(./IMG/pic-hero3.png);
+}
+
+#picto-hero4 {
+  background-image: url(./IMG/pic-hero4.png);
+  top: 580px;
+  left: 540px;
+  height: 40px;
+  width: 40px;
+}
+
+#picto-hero5 {
+  background-image: url(./IMG/pic-hero5.png);
+  top: 680px;
+  left: 10px;
+  height: 40px;
+  width: 40px;
 }
 
 @media screen and (max-width: 1500px) {
@@ -598,7 +646,7 @@ ul {
 h1 {
   font-style: normal;
   font-weight: 800;
-  font-size: 64px;
+  font-size: 80px;
   line-height: 126.9%;
   letter-spacing: 0.02em;
   color: #ffffff;
@@ -626,7 +674,7 @@ h1::after {
   line-height: 160.4%;
   letter-spacing: 0.02em;
   color: #ffffff;
-  margin-top: 60px;
+  margin-top: 100px;
   position: relative;
   white-space: nowrap;
 }
@@ -634,7 +682,7 @@ h1::after {
 #hero-description p::after {
   content: url(./IMG/lineh1-hero.svg);
   position: absolute;
-  top: -55px;
+  top: -75px;
   left: 0;
 }
 
@@ -646,23 +694,22 @@ h1::after {
   color: #fff;
   margin-top: 30px;
   display: inline-block;
-  padding: 8px;
+  padding: 16px;
   border: 2px solid #fff;
   border-radius: 5px;
 }
 
 #arrow-animation {
-  position: r@]elative;
+  position: r @]elative;
   top: 0px;
   left: 0px;
   transform-origin: center;
   animation: fleche 0.8s infinite;
 }
 
-#btn-reservation:hover  {
+#btn-reservation:hover {
   transform: scale(1.2);
 }
-
 
 /* ---------- MAIN - CHOOSE - SOCIETY ---------- */
 
