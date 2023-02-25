@@ -728,7 +728,7 @@ h1::after {
   font-size: 20px;
   line-height: 44px;
   letter-spacing: 0.02em;
-  color: #515151;
+  color: #3c2463;
   text-align: left;
   margin-bottom: 20px;
   position: relative;
@@ -775,7 +775,7 @@ h1::after {
   font-size: 40px;
   line-height: 147.4%;
   letter-spacing: 0.02em;
-  color: #565656;
+  color: #3c2463;
   text-align: center;
   margin-bottom: 80px;
 }
@@ -786,7 +786,7 @@ h1::after {
   font-size: 40px;
   line-height: 147.4%;
   letter-spacing: 0.02em;
-  color: #ffca1d;
+  color: #f72585;
   text-align: center;
 }
 
@@ -806,13 +806,20 @@ h1::after {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 20px;
+  background-color: #fff;
 }
 
 .item-service:hover {
+transform: translateY(-20px);
+}
+
+.item-service img {
+  border-radius: 30px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-  background: #fff;
-  border-radius: 20px;
+  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .item-service h5 {
@@ -821,7 +828,7 @@ h1::after {
   font-size: 20px;
   line-height: 147.4%;
   letter-spacing: 0.02em;
-  color: #2b3377;
+  color: #3c2463;
   margin-bottom: 30px;
   margin-top: 45px;
 }
@@ -861,7 +868,7 @@ h1::after {
   font-size: 48px;
   line-height: 147.4%;
   letter-spacing: 0.02em;
-  color: #565656;
+  color: #3c2463;
   text-align: center;
   margin-bottom: 60px;
 }
@@ -871,7 +878,7 @@ h1::after {
   font-size: 48px;
   line-height: 147.4%;
   letter-spacing: 0.02em;
-  color: #ffca1d;
+  color: #f72585;
 }
 
 #container-features {
@@ -1041,7 +1048,7 @@ h1::after {
   line-height: 147.4%;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #ffca1d;
+  color: #f72585;
 }
 
 #tools h4 {
@@ -1051,7 +1058,7 @@ h1::after {
   line-height: 147.4%;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #565656;
+  color: #3c2463;
   margin-bottom: 60px;
 }
 
@@ -1350,7 +1357,7 @@ h1::after {
   line-height: 147.4%;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #2d2d2d;
+  color: #3c2463;
 }
 
 #client h4 span {
@@ -1360,7 +1367,7 @@ h1::after {
   line-height: 147.4%;
   text-align: center;
   letter-spacing: 0.02em;
-  color: #ffca1d;
+  color: #f72585;
 }
 
 #import-clients {
@@ -1494,6 +1501,10 @@ form {
   margin-bottom: 80px;
 }
 
+#item-footer-right li {
+  margin-bottom: 3px;
+}
+
 #item-footer-right a {
   color: #fff;
   font-style: normal;
@@ -1511,7 +1522,7 @@ form {
 }
 
 .title-footer-right {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .title-footer-right #title-right-one,
@@ -1549,5 +1560,4 @@ form {
   #item-footer-right {
     width: 33%;
   }
-}
 }
